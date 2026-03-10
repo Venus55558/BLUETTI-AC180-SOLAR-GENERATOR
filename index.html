@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BLUETTI AC180 Portable Power Station</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins;
+}
+
+body{
+background:#000;
+color:white;
+overflow-x:hidden;
+}
+
+section{
+padding:100px 8%;
+}
+
+h1,h2{
+font-weight:800;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:linear-gradient(180deg,#0a0a0a,#000);
+}
+
+.hero h1{
+font-size:60px;
+background:linear-gradient(90deg,#00eaff,#4f46e5);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.hero p{
+margin-top:20px;
+font-size:20px;
+opacity:0.8;
+}
+
+.btn{
+
+display:inline-block;
+margin-top:30px;
+padding:18px 45px;
+border-radius:40px;
+background:#00eaff;
+color:black;
+font-weight:700;
+text-decoration:none;
+transition:0.3s;
+
+}
+
+.btn:hover{
+transform:scale(1.1);
+box-shadow:0 0 30px #00eaff;
+}
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+img{
+width:100%;
+border-radius:20px;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.feature{
+background:#111;
+padding:30px;
+border-radius:15px;
+transition:0.4s;
+}
+
+.feature:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px #00eaff;
+}
+
+.review{
+background:#111;
+padding:30px;
+border-radius:15px;
+margin-top:20px;
+}
+
+.cta{
+text-align:center;
+background:#020617;
+}
+
+.counter{
+font-size:40px;
+color:#00eaff;
+margin-top:10px;
+}
+
+.floating{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#00eaff;
+color:black;
+padding:15px 30px;
+border-radius:40px;
+font-weight:bold;
+text-decoration:none;
+animation:pulse 1.4s infinite;
+}
+
+@keyframes pulse{
+
+0%{transform:scale(1)}
+50%{transform:scale(1.1)}
+100%{transform:scale(1)}
+
+}
+
+@media(max-width:900px){
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+
+<h1>Unlimited Portable Power</h1>
+
+<p>The smart generator everyone is buying for emergencies, camping and home backup.</p>
+
+<a class="btn" href="https://amzn.to/3OZgx9H">Check Price on Amazon</a>
+
+</section>
+
+<section>
+
+<div class="grid">
+
+<div>
+
+<img src="https://m.media-amazon.com/images/I/71wX8jH0OIL._AC_SL1500_.jpg">
+
+</div>
+
+<div>
+
+<h2>Meet The BLUETTI AC180</h2>
+
+<p>
+
+1800W output power and 1152Wh battery capacity make this portable power station one of the most powerful compact generators available today.
+
+Charge your devices anywhere: camping, road trips, emergencies or off-grid living.
+
+</p>
+
+<a class="btn" href="https://amzn.to/3OZgx9H">Buy Now</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Why People Love It</h2>
+
+<div class="features">
+
+<div class="feature">
+
+<h3>⚡ 1800W Power</h3>
+<p>Run appliances, tools, laptops and more.</p>
+
+</div>
+
+<div class="feature">
+
+<h3>🔋 Massive Battery</h3>
+<p>1152Wh capacity for long power backup.</p>
+
+</div>
+
+<div class="feature">
+
+<h3>☀️ Solar Charging</h3>
+<p>Recharge using solar panels anywhere.</p>
+
+</div>
+
+<div class="feature">
+
+<h3>⚙️ Long Life</h3>
+<p>LiFePO4 battery with 3500+ cycles.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Customer Reviews</h2>
+
+<div class="review">
+
+⭐⭐⭐⭐⭐  
+“Perfect power station for my RV trips. Charges super fast!”
+
+</div>
+
+<div class="review">
+
+⭐⭐⭐⭐⭐  
+“I bought this for emergency backup during storms. Works perfectly.”
+
+</div>
+
+<div class="review">
+
+⭐⭐⭐⭐⭐  
+“Best portable generator I’ve ever owned.”
+
+</div>
+
+<a class="btn" href="https://amzn.to/3OZgx9H">See Today’s Price</a>
+
+</section>
+
+<section class="cta">
+
+<h2>Limited Discount Available</h2>
+
+<p>Units left at this price</p>
+
+<div class="counter" id="stock">21</div>
+
+<a class="btn" href="https://amzn.to/3OZgx9H">Get It On Amazon</a>
+
+</section>
+
+<a class="floating" href="https://amzn.to/3OZgx9H">Buy Now</a>
+
+<script>
+
+let stock=21;
+
+setInterval(()=>{
+
+stock--;
+
+if(stock<7){
+
+document.getElementById("stock").innerHTML="⚠️ "+stock+" left";
+
+}else{
+
+document.getElementById("stock").innerHTML=stock+" units";
+
+}
+
+},6000);
+
+</script>
+
+</body>
+
+</html>
